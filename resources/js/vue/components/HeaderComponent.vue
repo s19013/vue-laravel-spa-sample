@@ -4,8 +4,8 @@
             <nav class="navbar navbar-dark">
                 <span class="navbar-brand mb-0 h1">Vue Laravel SPA</span>
                 <div>
-                    <button class="btn btn-success">List</button>
-                    <button class="btn btn-success">ADD</button>
+                    <button class="btn btn-success mx-1 px-3">List</button>
+                    <button class="btn btn-success mx-1 px-3">ADD</button>
                 </div>
             </nav>
         </div>
