@@ -1,15 +1,18 @@
 <template>
-  <button @click="addCount">{{ count }} 回クリックしました！</button>
+    <header-component></header-component>
 </template>
-<script setup>
 
-import { ref } from 'vue'
+<script>
+import HeaderComponent  from "./components/HeaderComponent.vue";
+export default {
+  name: 'App',
+  components: {
+    HeaderComponent
+  },
+  data() {
+    return {
 
-const count = ref(0)
-const addCount = () => {
-
-    count.value++
-
-}
-
+    }
+  },
+};
 </script>
