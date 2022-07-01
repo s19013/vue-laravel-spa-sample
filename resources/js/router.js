@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import TaskListComponent from "./vue/components/task/TaskListComponent.vue";
 const routes = [
   {
     path: '/tasks',
@@ -10,12 +9,13 @@ const routes = [
     path: '/tasks/:taskId',
     name: 'task.show',
     component: () => import('./vue/components/task/TaskShowComponent.vue'),
-    props:true
+    props:true //なぜprops:trueをつけたのか
+    // https://v3.router.vuejs.org/ja/guide/essentials/passing-props.html
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env),
+  history: createWebHistory(),
   routes
 })
 
