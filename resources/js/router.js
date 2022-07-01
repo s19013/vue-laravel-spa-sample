@@ -17,6 +17,12 @@ const routes = [
     name: 'task.create',
     component: () => import('./vue/components/task/TaskCreateComponent.vue')
   },
+  {
+    path: '/tasks/:taskId/edit',
+    name: 'task.edit',
+    component: () => import('./vue/components/task/TaskEditComponent.vue'),
+    props:true
+  },
 ]
 
 const router = createRouter({
