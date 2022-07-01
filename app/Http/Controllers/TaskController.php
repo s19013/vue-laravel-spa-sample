@@ -19,5 +19,17 @@ class TaskController extends Controller
         });
     }
 
+    public function update(Request $request)
+    {
+        // 見つけて変数に代入
+        $task = Task::find($request->id);
+        // 更新
+        DB::transaction(function () use($request,$task){
+            $task->title    = $request->title;
+            $task->content  = $request->content;
+            $task->person_in_charge     = $request->person_in_charge;
 
+            $task->save();
+        });
+    }
 }
