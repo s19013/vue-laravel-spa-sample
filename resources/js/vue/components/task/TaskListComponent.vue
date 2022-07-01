@@ -46,15 +46,15 @@
             }
         },
         methods: {
-            getTasks(){
+            async getTasks(){
                 // api通信してタスクを取って来る
-                axios.get('/api/tasks')
+                await axios.get('/api/tasks')
                 .then((res) =>{
                     this.taskList = res.data;
                 });
             },
-            deleteTask(id){
-                axios.delete('/api/tasks/' + id)
+            async deleteTask(id){
+                await axios.delete('/api/tasks/' + id)
                 .then((res)=>{
                     this.getTasks();
                 });

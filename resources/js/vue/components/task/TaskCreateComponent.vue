@@ -31,9 +31,9 @@
             }
         },
         methods: {
-            submit(){
+            async submit(){
                 // post通信で送る
-                axios.post('/api/tasks',this.task)
+                await axios.post('/api/tasks',this.task)
                 .then((res) =>{
                     // jsから画面遷移
                     this.$router.push({name:'task.list'})

@@ -34,15 +34,15 @@
             }
         },
         methods: {
-            getTask(){
-                axios.get('/api/tasks/' + this.taskId)
+            async getTask(){
+                await axios.get('/api/tasks/' + this.taskId)
                 .then((res) =>{
                     this.task = res.data;
                 });
             },
-            submit(){
+            async submit(){
                 // post通信で送る
-                axios.post('/api/tasks/update',this.task)
+                await axios.post('/api/tasks/update',this.task)
                 .then((res) =>{
                     // jsから画面遷移
                     this.$router.push({name:'task.list'})
