@@ -25,6 +25,6 @@ Route::prefix('tasks')->group(function () {
     Route::post('/',[TaskController::class,'store']);
     Route::get ('/{task}',[TaskController::class,'show']);
     Route::post ('/update',[TaskController::class,'update']);
-    Route::delete('{task}',[TaskController::class,'destroy']);
+    Route::delete('/{task}',[TaskController::class,'destroy']);
 });
 

@@ -35,7 +35,7 @@ class TaskController extends Controller
 
     public function destroy(Task $task)
     {
-        DB::transaction(function () {
+        DB::transaction(function () use($task){
             $task->delete();
         });
     }
