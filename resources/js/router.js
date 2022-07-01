@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import TaskListComponent from "./vue/components/task/TaskListComponent.vue";
+// import TaskListComponent from "./vue/components/task/TaskListComponent.vue";
 const routes = [
   {
     path: '/tasks',
     name: 'task.list',
-    component: TaskListComponent
+    component: () => import('./vue/components/task/TaskListComponent.vue')
   },
   {
-    // path: '/about',
-    // name: 'About',
-    // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/tasks/:taskId',
+    name: 'task.show',
+    component: () => import('./vue/components/task/TaskShowComponent.vue'),
+    props:true
   }
 ]
 
