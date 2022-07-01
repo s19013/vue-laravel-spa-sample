@@ -19,7 +19,9 @@
                 <td>Content1</td>
                 <td>Ichiro</td>
                 <td>
-                    <button class="btn btn-primary">Show</button>
+                    <router-link v-bind:to="{name: 'task.show', params: {taskId: 1}}">
+                        <button class="btn btn-primary">Show</button>
+                    </router-link>
                 </td>
                 <td>
                     <button class="btn btn-success">Edit</button>
@@ -28,7 +30,7 @@
                     <button class="btn btn-danger">Delete</button>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <th scope="row">2</th>
                 <td>Title2</td>
                 <td>Content2</td>
@@ -57,7 +59,7 @@
                 <td>
                     <button class="btn btn-danger">Delete</button>
                 </td>
-            </tr>
+            </tr> -->
             </tbody>
         </table>
     </div>
