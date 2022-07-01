@@ -32,4 +32,11 @@ class TaskController extends Controller
             $task->save();
         });
     }
+
+    public function destroy(Task $task)
+    {
+        DB::transaction(function () {
+            $task->delete();
+        });
+    }
 }
