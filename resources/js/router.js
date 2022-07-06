@@ -1,6 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
+    path: '/',
+    name: 'home',
+    component: () => import('./vue/components/wellcomeView.vue')
+  },
+  {
+    path: '/login',
+    name: 'login.home',
+    component: () => import('./vue/components/wellcomeView.vue')
+  },
+  {
+    path: '/login/result',
+    name: 'login.result',
+    component: () => import('./vue/components/wellcomeView.vue')
+  },
+  {
+    path: '/regist',
+    name: 'regist.home',
+    component: () => import('./vue/components/wellcomeView.vue')
+  },
+  {
+    path: '/regist/result',
+    name: 'regist.result',
+    component: () => import('./vue/components/wellcomeView.vue')
+  },
+  {
     path: '/tasks',
     name: 'task.list',
     component: () => import('./vue/components/task/TaskListComponent.vue')
